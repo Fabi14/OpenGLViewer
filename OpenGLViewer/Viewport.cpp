@@ -36,6 +36,10 @@ int SViewport::Initialize(void)
 
 int SViewport::Update(void)
 {
+    if (SInput::GetKey(GLFW_KEY_ESCAPE))
+    {
+        glfwSetWindowShouldClose(m_pWindow, GLFW_TRUE);
+    }
 	return 0;
 }
 
